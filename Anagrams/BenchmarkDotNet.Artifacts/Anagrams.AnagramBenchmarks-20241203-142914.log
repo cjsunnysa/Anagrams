@@ -1,0 +1,192 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2
+// command took 1.18 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\bin\Release\net8.0/" --output "C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2
+// command took 5.19 sec and exited with 0
+// ***** Done, took 00:00:06 (6.43 sec)   *****
+// Found 2 benchmarks:
+//   AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmSingleThread: Job-NAOQDU(InvocationCount=1, IterationCount=2, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+//   AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmInParallel: Job-NAOQDU(InvocationCount=1, IterationCount=2, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmSingleThread: Job-NAOQDU(InvocationCount=1, IterationCount=2, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet d0068f50-ef20-4319-b900-b9e16a7cfae2.dll --anonymousPipes 1408 1296 --benchmarkName "Anagrams.AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmSingleThread(WordLength: 5)" --job "InvocationCount=1, IterationCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 0 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-CQYRAK(InvocationCount=1, IterationCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 24863509800.00 ns, 24.8635 s/op
+WorkloadActual   2: 1 op, 24706704500.00 ns, 24.7067 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 24863509800.00 ns, 24.8635 s/op
+WorkloadResult   2: 1 op, 24706704500.00 ns, 24.7067 s/op
+
+// AfterAll
+// Benchmark Process 14040 has exited with code 0.
+
+Mean = 24.785 s, StdErr = 0.078 s (0.32%), N = 2, StdDev = 0.111 s
+Min = 24.707 s, Q1 = 24.746 s, Median = 24.785 s, Q3 = 24.824 s, Max = 24.864 s
+IQR = 0.078 s, LowerFence = 24.628 s, UpperFence = 24.942 s
+ConfidenceInterval = [-25.128 s; 74.698 s] (CI 99.9%), Margin = 49.913 s (201.38% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+
+// ** Remained 1 (50.0%) benchmark(s) to run. Estimated finish 2024-12-03 14:31 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmInParallel: Job-NAOQDU(InvocationCount=1, IterationCount=2, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet d0068f50-ef20-4319-b900-b9e16a7cfae2.dll --anonymousPipes 1436 616 --benchmarkName "Anagrams.AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmInParallel(WordLength: 5)" --job "InvocationCount=1, IterationCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 1 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-JPTJBV(InvocationCount=1, IterationCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.AggregateException: One or more errors occurred. (Failed to compare two elements in the array.)
+ ---> System.InvalidOperationException: Failed to compare two elements in the array.
+ ---> System.ArgumentException: At least one object must implement IComparable.
+   at System.Collections.Comparer.Compare(Object a, Object b)
+   at System.Linq.EnumerableSorter`2.CompareAnyKeys(Int32 index1, Int32 index2)
+   at System.Collections.Generic.ArraySortHelper`1.SwapIfGreater(Span`1 keys, Comparison`1 comparer, Int32 i, Int32 j)
+   at System.Collections.Generic.ArraySortHelper`1.IntroSort(Span`1 keys, Int32 depthLimit, Comparison`1 comparer)
+   at System.Collections.Generic.ArraySortHelper`1.IntrospectiveSort(Span`1 keys, Comparison`1 comparer)
+   at System.Collections.Generic.ArraySortHelper`1.Sort(Span`1 keys, Comparison`1 comparer)
+   --- End of inner exception stack trace ---
+   at System.Collections.Generic.ArraySortHelper`1.Sort(Span`1 keys, Comparison`1 comparer)
+   at System.Linq.EnumerableSorter`2.QuickSort(Int32[] keys, Int32 lo, Int32 hi)
+   at System.Linq.EnumerableSorter`1.Sort(TElement[] elements, Int32 count)
+   at System.Linq.OrderedEnumerable`1.GetEnumerator()+MoveNext()
+   at System.Linq.Parallel.PartitionedDataSource`1.ContiguousChunkLazyEnumerator.MoveNext(T& currentElement, Int32& currentKey)
+   at System.Linq.Parallel.SelectQueryOperator`2.SelectQueryOperatorEnumerator`1.MoveNext(TOutput& currentElement, TKey& currentKey)
+   at System.Linq.Parallel.StopAndGoSpoolingTask`2.SpoolingWork()
+   at System.Linq.Parallel.SpoolingTaskBase.Work()
+   at System.Linq.Parallel.QueryTask.BaseWork(Object unused)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+   --- End of inner exception stack trace ---
+   at System.Linq.Parallel.QueryTaskGroupState.QueryEnd(Boolean userInitiatedDispose)
+   at System.Linq.Parallel.SpoolingTask.SpoolStopAndGo[TInputOutput,TIgnoreKey](QueryTaskGroupState groupState, PartitionedStream`2 partitions, SynchronousChannel`1[] channels, TaskScheduler taskScheduler)
+   at System.Linq.Parallel.DefaultMergeHelper`2.System.Linq.Parallel.IMergeHelper<TInputOutput>.Execute()
+   at System.Linq.Parallel.MergeExecutor`1.Execute()
+   at System.Linq.Parallel.MergeExecutor`1.Execute[TKey](PartitionedStream`2 partitions, Boolean ignoreOutput, ParallelMergeOptions options, TaskScheduler taskScheduler, Boolean isOrdered, CancellationState cancellationState, Int32 queryId)
+   at System.Linq.Parallel.PartitionedStreamMerger`1.Receive[TKey](PartitionedStream`2 partitionedStream)
+   at System.Linq.Parallel.SelectQueryOperator`2.WrapPartitionedStream[TKey](PartitionedStream`2 inputStream, IPartitionedStreamRecipient`1 recipient, Boolean preferStriping, QuerySettings settings)
+   at System.Linq.Parallel.UnaryQueryOperator`2.UnaryQueryOperatorResults.ChildResultsRecipient.Receive[TKey](PartitionedStream`2 inputStream)
+   at System.Linq.Parallel.ScanQueryOperator`1.ScanEnumerableQueryOperatorResults.GivePartitionedStream(IPartitionedStreamRecipient`1 recipient)
+   at System.Linq.Parallel.UnaryQueryOperator`2.UnaryQueryOperatorResults.GivePartitionedStream(IPartitionedStreamRecipient`1 recipient)
+   at System.Linq.Parallel.QueryOperator`1.GetOpenedEnumerator(Nullable`1 mergeOptions, Boolean suppressOrder, Boolean forEffect, QuerySettings querySettings)
+   at System.Linq.Parallel.QueryOpeningEnumerator`1.OpenQuery()
+   at System.Linq.Parallel.QueryOpeningEnumerator`1.MoveNext()
+   at Anagrams.Services.ParallelAnagramCalculator.CreateAnagramGroups(IAnagramAlgorithm anagramAlgorithm, ImmutableArray`1 words) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\Services\AnagramCalculator.cs:line 190
+   at Anagrams.Services.AnagramCalculator..ctor(IAnagramAlgorithm anagramAlgorithm, ImmutableArray`1 words) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\Services\AnagramCalculator.cs:line 105
+   at Anagrams.Services.ParallelAnagramCalculator..ctor(IAnagramAlgorithm anagramAlgorithm, ImmutableArray`1 words) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\Services\AnagramCalculator.cs:line 175
+   at Anagrams.AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmInParallel() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 79
+   at BenchmarkDotNet.Autogenerated.Runnable_1.WorkloadActionUnroll(Int64 invokeCount) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\d0068f50-ef20-4319-b900-b9e16a7cfae2.notcs:line 439
+   at BenchmarkDotNet.Engines.Engine.Measure(Action`1 action, Int64 invokeCount)
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_1.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\d0068f50-ef20-4319-b900-b9e16a7cfae2.notcs:line 346
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\d0068f50-ef20-4319-b900-b9e16a7cfae2\d0068f50-ef20-4319-b900-b9e16a7cfae2.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 15976 has exited with code -1.
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2024-12-03 14:30 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.html
+
+// * Detailed results *
+AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmSingleThread: Job-NAOQDU(InvocationCount=1, IterationCount=2, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 24.785 s, StdErr = 0.078 s (0.32%), N = 2, StdDev = 0.111 s
+Min = 24.707 s, Q1 = 24.746 s, Median = 24.785 s, Q3 = 24.824 s, Max = 24.864 s
+IQR = 0.078 s, LowerFence = 24.628 s, UpperFence = 24.942 s
+ConfidenceInterval = [-25.128 s; 74.698 s] (CI 99.9%), Margin = 49.913 s (201.38% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+-------------------- Histogram --------------------
+[24.670 s ; 24.901 s) | @@
+---------------------------------------------------
+
+AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmInParallel: Job-NAOQDU(InvocationCount=1, IterationCount=2, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+// * Summary *
+
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4460/23H2/2023Update/SunValley3)
+Intel Core i7-10750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-rc.2.24474.11
+  [Host]     : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+  Job-NAOQDU : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+
+InvocationCount=1  IterationCount=2  RunStrategy=ColdStart  
+UnrollFactor=1  
+
+| Method                                               | WordLength | Mean    | Error   | StdDev  | Min     | Max     | Median  |
+|----------------------------------------------------- |----------- |--------:|--------:|--------:|--------:|--------:|--------:|
+| GetAnagramsUsingDictionaryCountAlgorithmSingleThread | 5          | 24.79 s | 49.91 s | 0.111 s | 24.71 s | 24.86 s | 24.79 s |
+| GetAnagramsUsingDictionaryCountAlgorithmInParallel   | 5          |      NA |      NA |      NA |      NA |      NA |      NA |
+
+Benchmarks with issues:
+  AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmInParallel: Job-NAOQDU(InvocationCount=1, IterationCount=2, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+
+// * Warnings *
+Environment
+  Summary -> Detected error exit code from one of the benchmarks. It might be caused by following antivirus software:
+        - Windows Defender (windowsdefender://)
+Use InProcessEmitToolchain or InProcessNoEmitToolchain to avoid new process creation.
+
+
+// * Legends *
+  WordLength : Value of the 'WordLength' parameter
+  Mean       : Arithmetic mean of all measurements
+  Error      : Half of 99.9% confidence interval
+  StdDev     : Standard deviation of all measurements
+  Min        : Minimum
+  Max        : Maximum
+  Median     : Value separating the higher half of all measurements (50th percentile)
+  1 s        : 1 Second (1 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:52 (52.07 sec), executed benchmarks: 2
+
+Global total time: 00:00:58 (58.71 sec), executed benchmarks: 2
+// * Artifacts cleanup *
+Artifacts cleanup is finished

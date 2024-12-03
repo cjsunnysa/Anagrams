@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Anagrams.AnagramBenchmarks-20241203-150708</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4460/23H2/2023Update/SunValley3)
+Intel Core i7-10750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-rc.2.24474.11
+  [Host]     : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+  Job-LJTVQW : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>IterationCount=2  RunStrategy=ColdStart  
+</code></pre>
+
+<table>
+<thead><tr><th>Method                                        </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Min</th><th>Max</th><th>Median</th>
+</tr>
+</thead><tbody><tr><td>GetAnagramsUsingDictionaryCountAlgorithmSingleThread</td><td>2.600 m</td><td>5.166 m</td><td>0.0115 m</td><td>2.591 m</td><td>2.608 m</td><td>2.600 m</td>
+</tr><tr><td>GetAnagramsUsingDictionaryCountAlgorithmInParallel</td><td>1.712 m</td><td>6.703 m</td><td>0.0149 m</td><td>1.701 m</td><td>1.722 m</td><td>1.712 m</td>
+</tr></tbody></table>
+</body>
+</html>

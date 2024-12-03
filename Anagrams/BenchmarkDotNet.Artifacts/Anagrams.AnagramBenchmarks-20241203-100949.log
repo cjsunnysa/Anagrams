@@ -1,0 +1,158 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\4c1ab860-a09a-421f-bb1a-5bd0854ca41c\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\4c1ab860-a09a-421f-bb1a-5bd0854ca41c\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\4c1ab860-a09a-421f-bb1a-5bd0854ca41c\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\4c1ab860-a09a-421f-bb1a-5bd0854ca41c
+// command took 1.19 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\4c1ab860-a09a-421f-bb1a-5bd0854ca41c\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\4c1ab860-a09a-421f-bb1a-5bd0854ca41c\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\4c1ab860-a09a-421f-bb1a-5bd0854ca41c\bin\Release\net8.0/" --output "C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\4c1ab860-a09a-421f-bb1a-5bd0854ca41c\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\4c1ab860-a09a-421f-bb1a-5bd0854ca41c
+// command took 4.76 sec and exited with 0
+// ***** Done, took 00:00:06 (6.02 sec)   *****
+// Found 2 benchmarks:
+//   AnagramBenchmarks.GetAnagramsUsingSortingAlgorithm: Job-LIZIBQ(InvocationCount=1, IterationCount=5, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+//   AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithm: Job-LIZIBQ(InvocationCount=1, IterationCount=5, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.GetAnagramsUsingSortingAlgorithm: Job-LIZIBQ(InvocationCount=1, IterationCount=5, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4c1ab860-a09a-421f-bb1a-5bd0854ca41c.dll --anonymousPipes 1404 640 --benchmarkName "Anagrams.AnagramBenchmarks.GetAnagramsUsingSortingAlgorithm(WordLength: 5)" --job "InvocationCount=1, IterationCount=5, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 0 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\4c1ab860-a09a-421f-bb1a-5bd0854ca41c\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-MICWGT(InvocationCount=1, IterationCount=5, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 638459500.00 ns, 638.4595 ms/op
+WorkloadActual   2: 1 op, 640398500.00 ns, 640.3985 ms/op
+WorkloadActual   3: 1 op, 633264500.00 ns, 633.2645 ms/op
+WorkloadActual   4: 1 op, 636328000.00 ns, 636.3280 ms/op
+WorkloadActual   5: 1 op, 653550100.00 ns, 653.5501 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 638459500.00 ns, 638.4595 ms/op
+WorkloadResult   2: 1 op, 640398500.00 ns, 640.3985 ms/op
+WorkloadResult   3: 1 op, 633264500.00 ns, 633.2645 ms/op
+WorkloadResult   4: 1 op, 636328000.00 ns, 636.3280 ms/op
+WorkloadResult   5: 1 op, 653550100.00 ns, 653.5501 ms/op
+
+// AfterAll
+// Benchmark Process 22320 has exited with code 0.
+
+Mean = 640.400 ms, StdErr = 3.494 ms (0.55%), N = 5, StdDev = 7.813 ms
+Min = 633.264 ms, Q1 = 636.328 ms, Median = 638.460 ms, Q3 = 640.399 ms, Max = 653.550 ms
+IQR = 4.071 ms, LowerFence = 630.222 ms, UpperFence = 646.504 ms
+ConfidenceInterval = [610.314 ms; 670.486 ms] (CI 99.9%), Margin = 30.086 ms (4.70% of Mean)
+Skewness = 0.77, Kurtosis = 1.76, MValue = 2
+
+// ** Remained 1 (50.0%) benchmark(s) to run. Estimated finish 2024-12-03 10:10 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithm: Job-LIZIBQ(InvocationCount=1, IterationCount=5, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4c1ab860-a09a-421f-bb1a-5bd0854ca41c.dll --anonymousPipes 1332 640 --benchmarkName "Anagrams.AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithm(WordLength: 5)" --job "InvocationCount=1, IterationCount=5, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 1 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\4c1ab860-a09a-421f-bb1a-5bd0854ca41c\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-WPVDTZ(InvocationCount=1, IterationCount=5, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 4905839500.00 ns, 4.9058 s/op
+WorkloadActual   2: 1 op, 4807989500.00 ns, 4.8080 s/op
+WorkloadActual   3: 1 op, 4799356800.00 ns, 4.7994 s/op
+WorkloadActual   4: 1 op, 4849015800.00 ns, 4.8490 s/op
+WorkloadActual   5: 1 op, 4923036300.00 ns, 4.9230 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 4905839500.00 ns, 4.9058 s/op
+WorkloadResult   2: 1 op, 4807989500.00 ns, 4.8080 s/op
+WorkloadResult   3: 1 op, 4799356800.00 ns, 4.7994 s/op
+WorkloadResult   4: 1 op, 4849015800.00 ns, 4.8490 s/op
+WorkloadResult   5: 1 op, 4923036300.00 ns, 4.9230 s/op
+
+// AfterAll
+// Benchmark Process 22988 has exited with code 0.
+
+Mean = 4.857 s, StdErr = 0.025 s (0.52%), N = 5, StdDev = 0.056 s
+Min = 4.799 s, Q1 = 4.808 s, Median = 4.849 s, Q3 = 4.906 s, Max = 4.923 s
+IQR = 0.098 s, LowerFence = 4.661 s, UpperFence = 5.053 s
+ConfidenceInterval = [4.641 s; 5.073 s] (CI 99.9%), Margin = 0.216 s (4.44% of Mean)
+Skewness = 0.11, Kurtosis = 0.85, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2024-12-03 10:10 (0h 0m from now) **
+Successfully reverted power plan (GUID: 381b4222-f694-41f0-9685-ff5bb260df2e FriendlyName: Balanced)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.html
+
+// * Detailed results *
+AnagramBenchmarks.GetAnagramsUsingSortingAlgorithm: Job-LIZIBQ(InvocationCount=1, IterationCount=5, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 640.400 ms, StdErr = 3.494 ms (0.55%), N = 5, StdDev = 7.813 ms
+Min = 633.264 ms, Q1 = 636.328 ms, Median = 638.460 ms, Q3 = 640.399 ms, Max = 653.550 ms
+IQR = 4.071 ms, LowerFence = 630.222 ms, UpperFence = 646.504 ms
+ConfidenceInterval = [610.314 ms; 670.486 ms] (CI 99.9%), Margin = 30.086 ms (4.70% of Mean)
+Skewness = 0.77, Kurtosis = 1.76, MValue = 2
+-------------------- Histogram --------------------
+[630.463 ms ; 659.547 ms) | @@@@@
+---------------------------------------------------
+
+AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithm: Job-LIZIBQ(InvocationCount=1, IterationCount=5, RunStrategy=ColdStart, UnrollFactor=1) [WordLength=5]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 4.857 s, StdErr = 0.025 s (0.52%), N = 5, StdDev = 0.056 s
+Min = 4.799 s, Q1 = 4.808 s, Median = 4.849 s, Q3 = 4.906 s, Max = 4.923 s
+IQR = 0.098 s, LowerFence = 4.661 s, UpperFence = 5.053 s
+ConfidenceInterval = [4.641 s; 5.073 s] (CI 99.9%), Margin = 0.216 s (4.44% of Mean)
+Skewness = 0.11, Kurtosis = 0.85, MValue = 2
+-------------------- Histogram --------------------
+[4.776 s ; 4.966 s) | @@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4460/23H2/2023Update/SunValley3)
+Intel Core i7-10750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-rc.2.24474.11
+  [Host]     : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+  Job-LIZIBQ : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+
+InvocationCount=1  IterationCount=5  RunStrategy=ColdStart  
+UnrollFactor=1  
+
+| Method                                   | WordLength | Mean       | Error     | StdDev   | Min        | Max        | Median     |
+|----------------------------------------- |----------- |-----------:|----------:|---------:|-----------:|-----------:|-----------:|
+| GetAnagramsUsingSortingAlgorithm         | 5          |   640.4 ms |  30.09 ms |  7.81 ms |   633.3 ms |   653.6 ms |   638.5 ms |
+| GetAnagramsUsingDictionaryCountAlgorithm | 5          | 4,857.0 ms | 215.56 ms | 55.98 ms | 4,799.4 ms | 4,923.0 ms | 4,849.0 ms |
+
+// * Hints *
+Outliers
+  AnagramBenchmarks.GetAnagramsUsingSortingAlgorithm: InvocationCount=1, IterationCount=5, RunStrategy=ColdStart, UnrollFactor=1 -> 1 outlier  was  detected (653.55 ms)
+
+// * Legends *
+  WordLength : Value of the 'WordLength' parameter
+  Mean       : Arithmetic mean of all measurements
+  Error      : Half of 99.9% confidence interval
+  StdDev     : Standard deviation of all measurements
+  Min        : Minimum
+  Max        : Maximum
+  Median     : Value separating the higher half of all measurements (50th percentile)
+  1 ms       : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:31 (31.01 sec), executed benchmarks: 2
+
+Global total time: 00:00:37 (37.27 sec), executed benchmarks: 2
+// * Artifacts cleanup *
+Artifacts cleanup is finished

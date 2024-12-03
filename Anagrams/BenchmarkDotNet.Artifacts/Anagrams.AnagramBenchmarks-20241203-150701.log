@@ -1,0 +1,140 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\0d951530-4223-440f-9ff5-c229bbc1f52f\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\0d951530-4223-440f-9ff5-c229bbc1f52f\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\0d951530-4223-440f-9ff5-c229bbc1f52f\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\0d951530-4223-440f-9ff5-c229bbc1f52f
+// command took 1.51 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\0d951530-4223-440f-9ff5-c229bbc1f52f\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\0d951530-4223-440f-9ff5-c229bbc1f52f\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\0d951530-4223-440f-9ff5-c229bbc1f52f\bin\Release\net8.0/" --output "C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\0d951530-4223-440f-9ff5-c229bbc1f52f\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\0d951530-4223-440f-9ff5-c229bbc1f52f
+// command took 5.82 sec and exited with 0
+// ***** Done, took 00:00:07 (7.41 sec)   *****
+// Found 2 benchmarks:
+//   AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmSingleThread: Job-LJTVQW(IterationCount=2, RunStrategy=ColdStart)
+//   AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmInParallel: Job-LJTVQW(IterationCount=2, RunStrategy=ColdStart)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmSingleThread: Job-LJTVQW(IterationCount=2, RunStrategy=ColdStart)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 0d951530-4223-440f-9ff5-c229bbc1f52f.dll --anonymousPipes 1332 616 --benchmarkName Anagrams.AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmSingleThread --job "IterationCount=2, RunStrategy=ColdStart" --benchmarkId 0 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\0d951530-4223-440f-9ff5-c229bbc1f52f\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-YUVDCU(IterationCount=2, RunStrategy=ColdStart)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 156462691900.00 ns, 2.6077 m/op
+WorkloadActual   2: 1 op, 155488874600.00 ns, 2.5915 m/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 156462691900.00 ns, 2.6077 m/op
+WorkloadResult   2: 1 op, 155488874600.00 ns, 2.5915 m/op
+
+// AfterAll
+// Benchmark Process 23428 has exited with code 0.
+
+Mean = 2.600 m, StdErr = 0.008 m (0.31%), N = 2, StdDev = 0.011 m
+Min = 2.591 m, Q1 = 2.596 m, Median = 2.600 m, Q3 = 2.604 m, Max = 2.608 m
+IQR = 0.008 m, LowerFence = 2.583 m, UpperFence = 2.616 m
+ConfidenceInterval = [-2.567 m; 7.766 m] (CI 99.9%), Margin = 5.166 m (198.73% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+
+// ** Remained 1 (50.0%) benchmark(s) to run. Estimated finish 2024-12-03 15:17 (0h 5m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmInParallel: Job-LJTVQW(IterationCount=2, RunStrategy=ColdStart)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 0d951530-4223-440f-9ff5-c229bbc1f52f.dll --anonymousPipes 1084 1464 --benchmarkName Anagrams.AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmInParallel --job "IterationCount=2, RunStrategy=ColdStart" --benchmarkId 1 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\0d951530-4223-440f-9ff5-c229bbc1f52f\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-IGDFBS(IterationCount=2, RunStrategy=ColdStart)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 103347571600.00 ns, 1.7225 m/op
+WorkloadActual   2: 1 op, 102084009300.00 ns, 1.7014 m/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 103347571600.00 ns, 1.7225 m/op
+WorkloadResult   2: 1 op, 102084009300.00 ns, 1.7014 m/op
+
+// AfterAll
+// Benchmark Process 14776 has exited with code 0.
+
+Mean = 1.712 m, StdErr = 0.011 m (0.62%), N = 2, StdDev = 0.015 m
+Min = 1.701 m, Q1 = 1.707 m, Median = 1.712 m, Q3 = 1.717 m, Max = 1.722 m
+IQR = 0.011 m, LowerFence = 1.691 m, UpperFence = 1.733 m
+ConfidenceInterval = [-4.991 m; 8.415 m] (CI 99.9%), Margin = 6.703 m (391.57% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2024-12-03 15:15 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.html
+
+// * Detailed results *
+AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmSingleThread: Job-LJTVQW(IterationCount=2, RunStrategy=ColdStart)
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 2.600 m, StdErr = 0.008 m (0.31%), N = 2, StdDev = 0.011 m
+Min = 2.591 m, Q1 = 2.596 m, Median = 2.600 m, Q3 = 2.604 m, Max = 2.608 m
+IQR = 0.008 m, LowerFence = 2.583 m, UpperFence = 2.616 m
+ConfidenceInterval = [-2.567 m; 7.766 m] (CI 99.9%), Margin = 5.166 m (198.73% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+-------------------- Histogram --------------------
+[2.588 m ; 2.612 m) | @@
+---------------------------------------------------
+
+AnagramBenchmarks.GetAnagramsUsingDictionaryCountAlgorithmInParallel: Job-LJTVQW(IterationCount=2, RunStrategy=ColdStart)
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 1.712 m, StdErr = 0.011 m (0.62%), N = 2, StdDev = 0.015 m
+Min = 1.701 m, Q1 = 1.707 m, Median = 1.712 m, Q3 = 1.717 m, Max = 1.722 m
+IQR = 0.011 m, LowerFence = 1.691 m, UpperFence = 1.733 m
+ConfidenceInterval = [-4.991 m; 8.415 m] (CI 99.9%), Margin = 6.703 m (391.57% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+-------------------- Histogram --------------------
+[1.696 m ; 1.727 m) | @@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4460/23H2/2023Update/SunValley3)
+Intel Core i7-10750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-rc.2.24474.11
+  [Host]     : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+  Job-LJTVQW : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+
+IterationCount=2  RunStrategy=ColdStart  
+
+| Method                                               | Mean    | Error   | StdDev   | Min     | Max     | Median  |
+|----------------------------------------------------- |--------:|--------:|---------:|--------:|--------:|--------:|
+| GetAnagramsUsingDictionaryCountAlgorithmSingleThread | 2.600 m | 5.166 m | 0.0115 m | 2.591 m | 2.608 m | 2.600 m |
+| GetAnagramsUsingDictionaryCountAlgorithmInParallel   | 1.712 m | 6.703 m | 0.0149 m | 1.701 m | 1.722 m | 1.712 m |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Min    : Minimum
+  Max    : Maximum
+  Median : Value separating the higher half of all measurements (50th percentile)
+  1 m    : 1 Minute (60 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:08:41 (521.32 sec), executed benchmarks: 2
+
+Global total time: 00:08:48 (528.94 sec), executed benchmarks: 2
+// * Artifacts cleanup *
+Artifacts cleanup is finished
