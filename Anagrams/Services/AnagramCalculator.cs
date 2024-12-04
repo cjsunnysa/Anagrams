@@ -1,10 +1,12 @@
 ﻿using System.Collections.Concurrent;
 using System.Collections.Immutable;
+using System.Diagnostics.Tracing;
+using System.Numerics;
 using System.Text;
 
 namespace Anagrams.Services;
 
-internal sealed class AnagramGroup(List<string> words, int points)
+internal sealed class AnagramGroup(IEnumerable<string> words, int points)
 {
     public ImmutableArray<string> Words { get; } = [.. words];
     public int Points { get; } = points;
@@ -24,12 +26,12 @@ internal sealed class AnagramGroup(List<string> words, int points)
     }
 }
 
-internal interface IAnagramAlgorithm
+internal interface IAnagramCompareAlgorithm
 {
     bool IsAnagram(string s1, string s2);
 }
 
-internal sealed class DictionaryCountAnagramAlgorithm : IAnagramAlgorithm
+internal sealed class LetterCountAnagramCompareAlgorithm : IAnagramCompareAlgorithm
 {
     public bool IsAnagram(string s1, string s2)
     {
@@ -38,7 +40,7 @@ internal sealed class DictionaryCountAnagramAlgorithm : IAnagramAlgorithm
             return false;
         }
 
-        var chars = new Dictionary<char, int>();
+        var chars = new Dictionary<char, int>(s1.Length);
 
         foreach (char ch in s1)
         {
@@ -59,7 +61,7 @@ internal sealed class DictionaryCountAnagramAlgorithm : IAnagramAlgorithm
     }
 }
 
-internal sealed class SortCompareAnagramAlgorithm : IAnagramAlgorithm
+internal sealed class SortAnagramCompareAlgorithm : IAnagramCompareAlgorithm
 {
     public bool IsAnagram(string s1, string s2)
     {
@@ -75,7 +77,41 @@ internal sealed class SortCompareAnagramAlgorithm : IAnagramAlgorithm
     }
 }
 
-internal class AnagramCalculator
+internal sealed class SingleThreadedLengthPartitionedAnagramCalculator(IAnagramCompareAlgorithm anagramAlgorithm, IEnumerable<string> words) : AnagramCalculator(anagramAlgorithm, words)
+{
+    protected override ImmutableArray<AnagramGroup> CreateAnagramGroups(IAnagramCompareAlgorithm anagramAlgorithm, IEnumerable<string> words)
+    {
+        return
+            words
+                .GroupBy(x => x.Length)
+                .SelectMany(x => CreateAnagramGroupsForSection(anagramAlgorithm, [.. x]))
+                .ToImmutableArray();
+    }
+}
+
+internal sealed class MultithreadedLengthPartitionedAnagramCalculator(IAnagramCompareAlgorithm anagramAlgorithm, IEnumerable<string> words) : AnagramCalculator(anagramAlgorithm, words)
+{
+    protected override ImmutableArray<AnagramGroup> CreateAnagramGroups(IAnagramCompareAlgorithm anagramAlgorithm, IEnumerable<string> words)
+    {
+        return
+            words
+                .GroupBy(x => x.Length)
+                .AsParallel()
+                .WithMergeOptions(ParallelMergeOptions.FullyBuffered)
+                .SelectMany(x => CreateAnagramGroupsForSection(anagramAlgorithm, x.ToImmutableArray()))
+                .ToImmutableArray();
+    }
+}
+
+internal sealed class UnpartitionedAnagramCalculator(IAnagramCompareAlgorithm anagramAlgorithm, IEnumerable<string> words) : AnagramCalculator(anagramAlgorithm, words)
+{
+    protected override ImmutableArray<AnagramGroup> CreateAnagramGroups(IAnagramCompareAlgorithm anagramAlgorithm, IEnumerable<string> words)
+    {
+        return CreateAnagramGroupsForSection(anagramAlgorithm, [.. words]);
+    }
+}
+
+internal abstract class AnagramCalculator
 {
     private static class WordScorer
     {
@@ -100,46 +136,38 @@ internal class AnagramCalculator
 
     private readonly ImmutableArray<AnagramGroup> _anagrams;
 
-    public AnagramCalculator(IAnagramAlgorithm anagramAlgorithm, ImmutableArray<string> words)
+    public AnagramCalculator(IAnagramCompareAlgorithm anagramAlgorithm, IEnumerable<string> words)
     {
         _anagrams = CreateAnagramGroups(anagramAlgorithm, words);
     }
 
-    protected virtual ImmutableArray<AnagramGroup> CreateAnagramGroups(IAnagramAlgorithm anagramAlgorithm, ImmutableArray<string> words)
+    protected abstract ImmutableArray<AnagramGroup> CreateAnagramGroups(IAnagramCompareAlgorithm anagramAlgorithm, IEnumerable<string> words);
+
+    protected ImmutableArray<AnagramGroup> CreateAnagramGroupsForSection(IAnagramCompareAlgorithm anagramAlgorithm, IList<string> words)
     {
-        return CreateAnagramGroupsForSection(anagramAlgorithm, words);
-    }
+        HashSet<int> foundIndexes = new HashSet<int>(words.Count/3);
 
-    protected ImmutableArray<AnagramGroup> CreateAnagramGroupsForSection(IAnagramAlgorithm anagramAlgorithm, ImmutableArray<string> words)
-    {
-        HashSet<int> anagramIndexes = [];
+        HashSet<AnagramGroup> results = new HashSet<AnagramGroup>(300);
 
-        List<AnagramGroup> results = [];
-
-        for (int i = 0; i < words.Length; i++)
+        for (int i = 0; i < words.Count; i++)
         {
             var candidateWord = words[i];
 
-            var anagrams = new List<string> { candidateWord };
+            var anagrams = new HashSet<string>(10) { candidateWord };
 
-            for (int j = i + 1; j < words.Length; j++)
+            for (int j = i + 1; j < words.Count; j++)
             {
-                if (anagramIndexes.Contains(j))
+                var compareWord = words[j];
+
+                if (candidateWord.Length != compareWord.Length || foundIndexes.Contains(j))
                 {
                     continue;
                 }
 
-                var compareWord = words[j];
-
-                if (compareWord.Length > candidateWord.Length)
-                {
-                    break;
-                }
-
                 if (anagramAlgorithm.IsAnagram(candidateWord, compareWord))
                 {
+                    foundIndexes.Add(j);
                     anagrams.Add(compareWord);
-                    anagramIndexes.Add(j);
                 }
             }
 
@@ -161,37 +189,10 @@ internal class AnagramCalculator
 
     public ImmutableArray<AnagramGroup> GetHighestScoredAnagrams(int take = 1)
     {
-        return 
+        return
             _anagrams
                 .OrderByDescending(x => x.Points)
                 .Take(take)
                 .ToImmutableArray();
-    }
-}
-
-internal class ParallelAnagramCalculator : AnagramCalculator
-{
-    public ParallelAnagramCalculator(IAnagramAlgorithm anagramAlgorithm, ImmutableArray<string> words) 
-        : base(anagramAlgorithm, words)
-    { }
-
-    protected override ImmutableArray<AnagramGroup> CreateAnagramGroups(IAnagramAlgorithm anagramAlgorithm, ImmutableArray<string> words)
-    {
-        var parallelQuery =
-            words
-                .GroupBy(x => x.Length)
-                .AsParallel()
-                .WithMergeOptions(ParallelMergeOptions.FullyBuffered)
-                .Select(x => CreateAnagramGroupsForSection(anagramAlgorithm, [.. x]))
-                .SelectMany(x => x);
-
-        var response = new ConcurrentBag<AnagramGroup>();
-
-        foreach (var group in parallelQuery)
-        {
-            response.Add(group);
-        }
-
-        return [.. response];
     }
 }

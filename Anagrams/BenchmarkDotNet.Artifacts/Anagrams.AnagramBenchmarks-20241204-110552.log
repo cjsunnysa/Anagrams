@@ -1,0 +1,29 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\e1e0656f-ee7d-441e-b9ed-e0eb628a2cdc\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\e1e0656f-ee7d-441e-b9ed-e0eb628a2cdc\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\e1e0656f-ee7d-441e-b9ed-e0eb628a2cdc\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\e1e0656f-ee7d-441e-b9ed-e0eb628a2cdc
+// command took 1.23 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\e1e0656f-ee7d-441e-b9ed-e0eb628a2cdc\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\e1e0656f-ee7d-441e-b9ed-e0eb628a2cdc\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\e1e0656f-ee7d-441e-b9ed-e0eb628a2cdc\bin\Release\net8.0/" --output "C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\e1e0656f-ee7d-441e-b9ed-e0eb628a2cdc\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\e1e0656f-ee7d-441e-b9ed-e0eb628a2cdc
+// command took 5.4 sec and exited with 0
+// ***** Done, took 00:00:06 (6.7 sec)   *****
+// Found 2 benchmarks:
+//   AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-PZEZIT(IterationCount=2, RunStrategy=ColdStart)
+//   AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-PZEZIT(IterationCount=2, RunStrategy=ColdStart)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-PZEZIT(IterationCount=2, RunStrategy=ColdStart)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet e1e0656f-ee7d-441e-b9ed-e0eb628a2cdc.dll --anonymousPipes 1084 1068 --benchmarkName Anagrams.AnagramBenchmarks.LetterCountAlgorithmUnpartitioned --job "IterationCount=2, RunStrategy=ColdStart" --benchmarkId 0 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\e1e0656f-ee7d-441e-b9ed-e0eb628a2cdc\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-BYNNIK(IterationCount=2, RunStrategy=ColdStart)
+
+// BeforeActualRun

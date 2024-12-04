@@ -5,15 +5,13 @@ using System.Collections.Immutable;
 
 namespace Anagrams;
 
-[SimpleJob(RunStrategy.ColdStart, iterationCount: 2)]
+[SimpleJob(RunStrategy.ColdStart, iterationCount: 1)]
 [MinColumn, MaxColumn, MeanColumn, MedianColumn]
 public class AnagramBenchmarks
 {
-    private readonly int[] _wordLengths = [2, 3, 4, 5, 6, 7, 8];
+    //private readonly int[] _wordLengths = [ 2, 3, 4, 5, 6, 7 ];
 
     private ImmutableArray<string> _words;
-
-    private ImmutableArray<string> _filteredWords = [];
 
     [GlobalSetup]
     public async Task Setup()
@@ -28,26 +26,29 @@ public class AnagramBenchmarks
 
         _words = await httpService.FetchWords();
 
-        _filteredWords =
-            _words
-                .Where(x => _wordLengths.Contains(x.Length))
-                .OrderBy(x => x.Length)
-                .ThenBy(x => x)
-                .ToImmutableArray();
+        //_words = words.Where(x => _wordLengths.Contains(x.Length)).ToImmutableArray();
     }
 
     [Benchmark]
-    public void GetAnagramsUsingDictionaryCountAlgorithmSingleThread()
+    public void LetterCountAlgorithmUnpartitioned()
     {
-        var calculator = new AnagramCalculator(new DictionaryCountAnagramAlgorithm(), _filteredWords);
+        var calculator = new UnpartitionedAnagramCalculator(new LetterCountAnagramCompareAlgorithm(), _words);
 
         _ = calculator.GetAllAnagrams();
     }
 
     [Benchmark]
-    public void GetAnagramsUsingDictionaryCountAlgorithmInParallel()
+    public void LetterCountAlgorithmSingleThreadedLengthPartitioned()
     {
-        var calculator = new ParallelAnagramCalculator(new DictionaryCountAnagramAlgorithm(), _filteredWords);
+        var calculator = new SingleThreadedLengthPartitionedAnagramCalculator(new LetterCountAnagramCompareAlgorithm(), _words);
+
+        _ = calculator.GetAllAnagrams();
+    }
+
+    [Benchmark]
+    public void LetterCountAlgorithmMultithreadedLengthPartitioned()
+    {
+        var calculator = new MultithreadedLengthPartitionedAnagramCalculator(new LetterCountAnagramCompareAlgorithm(), _words);
 
         _ = calculator.GetAllAnagrams();
     }

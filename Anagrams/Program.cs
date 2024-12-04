@@ -17,13 +17,11 @@ try
 
     //var words = await httpService.FetchWords();
 
-    //var wordsSubset = words.Where(x => x.Length == 6).OrderBy(x => x.Length).ThenBy(x => x).ToImmutableArray();
+    //var anagramAlgorithm = new LetterCountAnagramCompareAlgorithm();
 
-    //var anagramAlgorithm = new SortCompareAnagramAlgorithm();
+    //var anagramCalculator = new MultithreadedLengthPartitionedAnagramCalculator(anagramAlgorithm, words);
 
-    //var anagramCalculator = new AnagramCalculator(anagramAlgorithm, wordsSubset);
-
-    //var anagramGroups = anagramCalculator.GetHighestScoredAnagrams(take: 5);
+    //var anagramGroups = anagramCalculator.GetAllAnagrams();
 
     //foreach (var group in anagramGroups)
     //{

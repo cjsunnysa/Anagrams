@@ -1,0 +1,186 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325
+// command took 1.22 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325\bin\Release\net8.0/" --output "C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325
+// command took 5.11 sec and exited with 0
+// ***** Done, took 00:00:06 (6.4 sec)   *****
+// Found 3 benchmarks:
+//   AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-EBJORY(IterationCount=2, RunStrategy=ColdStart)
+//   AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-EBJORY(IterationCount=2, RunStrategy=ColdStart)
+//   AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-EBJORY(IterationCount=2, RunStrategy=ColdStart)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-EBJORY(IterationCount=2, RunStrategy=ColdStart)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet cc443fef-f1b1-4635-9b6e-b962af2bb325.dll --anonymousPipes 1388 1352 --benchmarkName Anagrams.AnagramBenchmarks.LetterCountAlgorithmUnpartitioned --job "IterationCount=2, RunStrategy=ColdStart" --benchmarkId 0 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-LPASFD(IterationCount=2, RunStrategy=ColdStart)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 18440178800.00 ns, 18.4402 s/op
+WorkloadActual   2: 1 op, 17949833000.00 ns, 17.9498 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 18440178800.00 ns, 18.4402 s/op
+WorkloadResult   2: 1 op, 17949833000.00 ns, 17.9498 s/op
+
+// AfterAll
+// Benchmark Process 29000 has exited with code 0.
+
+Mean = 18.195 s, StdErr = 0.245 s (1.35%), N = 2, StdDev = 0.347 s
+Min = 17.950 s, Q1 = 18.072 s, Median = 18.195 s, Q3 = 18.318 s, Max = 18.440 s
+IQR = 0.245 s, LowerFence = 17.705 s, UpperFence = 18.685 s
+ConfidenceInterval = [-137.887 s; 174.277 s] (CI 99.9%), Margin = 156.082 s (857.83% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+
+// ** Remained 2 (66.7%) benchmark(s) to run. Estimated finish 2024-12-04 11:22 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-EBJORY(IterationCount=2, RunStrategy=ColdStart)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet cc443fef-f1b1-4635-9b6e-b962af2bb325.dll --anonymousPipes 1288 1356 --benchmarkName Anagrams.AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned --job "IterationCount=2, RunStrategy=ColdStart" --benchmarkId 1 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-XDRLEZ(IterationCount=2, RunStrategy=ColdStart)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 18255083600.00 ns, 18.2551 s/op
+WorkloadActual   2: 1 op, 17994110200.00 ns, 17.9941 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 18255083600.00 ns, 18.2551 s/op
+WorkloadResult   2: 1 op, 17994110200.00 ns, 17.9941 s/op
+
+// AfterAll
+// Benchmark Process 36976 has exited with code 0.
+
+Mean = 18.125 s, StdErr = 0.130 s (0.72%), N = 2, StdDev = 0.185 s
+Min = 17.994 s, Q1 = 18.059 s, Median = 18.125 s, Q3 = 18.190 s, Max = 18.255 s
+IQR = 0.130 s, LowerFence = 17.864 s, UpperFence = 18.386 s
+ConfidenceInterval = [-64.946 s; 101.195 s] (CI 99.9%), Margin = 83.070 s (458.33% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+
+// ** Remained 1 (33.3%) benchmark(s) to run. Estimated finish 2024-12-04 11:22 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-EBJORY(IterationCount=2, RunStrategy=ColdStart)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet cc443fef-f1b1-4635-9b6e-b962af2bb325.dll --anonymousPipes 872 616 --benchmarkName Anagrams.AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned --job "IterationCount=2, RunStrategy=ColdStart" --benchmarkId 2 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\cc443fef-f1b1-4635-9b6e-b962af2bb325\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-OGVMSQ(IterationCount=2, RunStrategy=ColdStart)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 19006346900.00 ns, 19.0063 s/op
+WorkloadActual   2: 1 op, 18368937000.00 ns, 18.3689 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 19006346900.00 ns, 19.0063 s/op
+WorkloadResult   2: 1 op, 18368937000.00 ns, 18.3689 s/op
+
+// AfterAll
+// Benchmark Process 35344 has exited with code 0.
+
+Mean = 18.688 s, StdErr = 0.319 s (1.71%), N = 2, StdDev = 0.451 s
+Min = 18.369 s, Q1 = 18.528 s, Median = 18.688 s, Q3 = 18.847 s, Max = 19.006 s
+IQR = 0.319 s, LowerFence = 18.050 s, UpperFence = 19.325 s
+ConfidenceInterval = [-184.206 s; 221.581 s] (CI 99.9%), Margin = 202.894 s (1085.71% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2024-12-04 11:22 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.html
+
+// * Detailed results *
+AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-EBJORY(IterationCount=2, RunStrategy=ColdStart)
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 18.195 s, StdErr = 0.245 s (1.35%), N = 2, StdDev = 0.347 s
+Min = 17.950 s, Q1 = 18.072 s, Median = 18.195 s, Q3 = 18.318 s, Max = 18.440 s
+IQR = 0.245 s, LowerFence = 17.705 s, UpperFence = 18.685 s
+ConfidenceInterval = [-137.887 s; 174.277 s] (CI 99.9%), Margin = 156.082 s (857.83% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+-------------------- Histogram --------------------
+[17.834 s ; 18.556 s) | @@
+---------------------------------------------------
+
+AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-EBJORY(IterationCount=2, RunStrategy=ColdStart)
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 18.125 s, StdErr = 0.130 s (0.72%), N = 2, StdDev = 0.185 s
+Min = 17.994 s, Q1 = 18.059 s, Median = 18.125 s, Q3 = 18.190 s, Max = 18.255 s
+IQR = 0.130 s, LowerFence = 17.864 s, UpperFence = 18.386 s
+ConfidenceInterval = [-64.946 s; 101.195 s] (CI 99.9%), Margin = 83.070 s (458.33% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+-------------------- Histogram --------------------
+[17.932 s ; 18.317 s) | @@
+---------------------------------------------------
+
+AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-EBJORY(IterationCount=2, RunStrategy=ColdStart)
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 18.688 s, StdErr = 0.319 s (1.71%), N = 2, StdDev = 0.451 s
+Min = 18.369 s, Q1 = 18.528 s, Median = 18.688 s, Q3 = 18.847 s, Max = 19.006 s
+IQR = 0.319 s, LowerFence = 18.050 s, UpperFence = 19.325 s
+ConfidenceInterval = [-184.206 s; 221.581 s] (CI 99.9%), Margin = 202.894 s (1085.71% of Mean)
+Skewness = 0, Kurtosis = 0.25, MValue = 2
+-------------------- Histogram --------------------
+[18.218 s ; 19.157 s) | @@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4460/23H2/2023Update/SunValley3)
+Intel Core i7-10750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-rc.2.24474.11
+  [Host]     : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+  Job-EBJORY : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+
+IterationCount=2  RunStrategy=ColdStart  
+
+| Method                                              | Mean    | Error    | StdDev  | Min     | Max     | Median  |
+|---------------------------------------------------- |--------:|---------:|--------:|--------:|--------:|--------:|
+| LetterCountAlgorithmUnpartitioned                   | 18.20 s | 156.08 s | 0.347 s | 17.95 s | 18.44 s | 18.20 s |
+| LetterCountAlgorithmSingleThreadedLengthPartitioned | 18.12 s |  83.07 s | 0.185 s | 17.99 s | 18.26 s | 18.12 s |
+| LetterCountAlgorithmMultithreadedLengthPartitioned  | 18.69 s | 202.89 s | 0.451 s | 18.37 s | 19.01 s | 18.69 s |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Min    : Minimum
+  Max    : Maximum
+  Median : Value separating the higher half of all measurements (50th percentile)
+  1 s    : 1 Second (1 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:01:52 (112.48 sec), executed benchmarks: 3
+
+Global total time: 00:01:59 (119.1 sec), executed benchmarks: 3
+// * Artifacts cleanup *
+Artifacts cleanup is finished

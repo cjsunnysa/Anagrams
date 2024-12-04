@@ -1,0 +1,179 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b
+// command took 1.8 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b\bin\Release\net8.0/" --output "C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b
+// command took 5.86 sec and exited with 0
+// ***** Done, took 00:00:07 (7.74 sec)   *****
+// Found 3 benchmarks:
+//   AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-YMOMVH(IterationCount=1, RunStrategy=ColdStart)
+//   AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-YMOMVH(IterationCount=1, RunStrategy=ColdStart)
+//   AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-YMOMVH(IterationCount=1, RunStrategy=ColdStart)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-YMOMVH(IterationCount=1, RunStrategy=ColdStart)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 127268f7-adda-4603-90c4-a26b92cd648b.dll --anonymousPipes 1592 1564 --benchmarkName Anagrams.AnagramBenchmarks.LetterCountAlgorithmUnpartitioned --job "IterationCount=1, RunStrategy=ColdStart" --benchmarkId 0 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-VWCNLR(IterationCount=1, RunStrategy=ColdStart)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 317272319300.00 ns, 5.2879 m/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 317272319300.00 ns, 5.2879 m/op
+
+// AfterAll
+// Benchmark Process 8572 has exited with code 0.
+
+Mean = 5.288 m, StdErr = 0.000 m (0.00%), N = 1, StdDev = 0.000 m
+Min = 5.288 m, Q1 = 5.288 m, Median = 5.288 m, Q3 = 5.288 m, Max = 5.288 m
+IQR = 0.000 m, LowerFence = 5.288 m, UpperFence = 5.288 m
+ConfidenceInterval = [NaN m; NaN m] (CI 99.9%), Margin = NaN m (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 2 (66.7%) benchmark(s) to run. Estimated finish 2024-12-04 16:21 (0h 10m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-YMOMVH(IterationCount=1, RunStrategy=ColdStart)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 127268f7-adda-4603-90c4-a26b92cd648b.dll --anonymousPipes 1520 1388 --benchmarkName Anagrams.AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned --job "IterationCount=1, RunStrategy=ColdStart" --benchmarkId 1 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-MZDVMW(IterationCount=1, RunStrategy=ColdStart)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 279636462900.00 ns, 4.6606 m/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 279636462900.00 ns, 4.6606 m/op
+
+// AfterAll
+// Benchmark Process 14976 has exited with code 0.
+
+Mean = 4.661 m, StdErr = 0.000 m (0.00%), N = 1, StdDev = 0.000 m
+Min = 4.661 m, Q1 = 4.661 m, Median = 4.661 m, Q3 = 4.661 m, Max = 4.661 m
+IQR = 0.000 m, LowerFence = 4.661 m, UpperFence = 4.661 m
+ConfidenceInterval = [NaN m; NaN m] (CI 99.9%), Margin = NaN m (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 1 (33.3%) benchmark(s) to run. Estimated finish 2024-12-04 16:20 (0h 4m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-YMOMVH(IterationCount=1, RunStrategy=ColdStart)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 127268f7-adda-4603-90c4-a26b92cd648b.dll --anonymousPipes 1560 1564 --benchmarkName Anagrams.AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned --job "IterationCount=1, RunStrategy=ColdStart" --benchmarkId 2 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\127268f7-adda-4603-90c4-a26b92cd648b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-WPOHYN(IterationCount=1, RunStrategy=ColdStart)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 124223367100.00 ns, 2.0704 m/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 124223367100.00 ns, 2.0704 m/op
+
+// AfterAll
+// Benchmark Process 31476 has exited with code 0.
+
+Mean = 2.070 m, StdErr = 0.000 m (0.00%), N = 1, StdDev = 0.000 m
+Min = 2.070 m, Q1 = 2.070 m, Median = 2.070 m, Q3 = 2.070 m, Max = 2.070 m
+IQR = 0.000 m, LowerFence = 2.070 m, UpperFence = 2.070 m
+ConfidenceInterval = [NaN m; NaN m] (CI 99.9%), Margin = NaN m (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2024-12-04 16:17 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.html
+
+// * Detailed results *
+AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-YMOMVH(IterationCount=1, RunStrategy=ColdStart)
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 5.288 m, StdErr = 0.000 m (0.00%), N = 1, StdDev = 0.000 m
+Min = 5.288 m, Q1 = 5.288 m, Median = 5.288 m, Q3 = 5.288 m, Max = 5.288 m
+IQR = 0.000 m, LowerFence = 5.288 m, UpperFence = 5.288 m
+ConfidenceInterval = [NaN m; NaN m] (CI 99.9%), Margin = NaN m (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[5.288 m ; 5.288 m) | @
+---------------------------------------------------
+
+AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-YMOMVH(IterationCount=1, RunStrategy=ColdStart)
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 4.661 m, StdErr = 0.000 m (0.00%), N = 1, StdDev = 0.000 m
+Min = 4.661 m, Q1 = 4.661 m, Median = 4.661 m, Q3 = 4.661 m, Max = 4.661 m
+IQR = 0.000 m, LowerFence = 4.661 m, UpperFence = 4.661 m
+ConfidenceInterval = [NaN m; NaN m] (CI 99.9%), Margin = NaN m (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[4.661 m ; 4.661 m) | @
+---------------------------------------------------
+
+AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-YMOMVH(IterationCount=1, RunStrategy=ColdStart)
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 2.070 m, StdErr = 0.000 m (0.00%), N = 1, StdDev = 0.000 m
+Min = 2.070 m, Q1 = 2.070 m, Median = 2.070 m, Q3 = 2.070 m, Max = 2.070 m
+IQR = 0.000 m, LowerFence = 2.070 m, UpperFence = 2.070 m
+ConfidenceInterval = [NaN m; NaN m] (CI 99.9%), Margin = NaN m (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[2.070 m ; 2.070 m) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4460/23H2/2023Update/SunValley3)
+Intel Core i7-10750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-rc.2.24474.11
+  [Host]     : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+  Job-YMOMVH : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+
+IterationCount=1  RunStrategy=ColdStart  
+
+| Method                                              | Mean    | Error | Min     | Max     | Median  |
+|---------------------------------------------------- |--------:|------:|--------:|--------:|--------:|
+| LetterCountAlgorithmUnpartitioned                   | 5.288 m |    NA | 5.288 m | 5.288 m | 5.288 m |
+| LetterCountAlgorithmSingleThreadedLengthPartitioned | 4.661 m |    NA | 4.661 m | 4.661 m | 4.661 m |
+| LetterCountAlgorithmMultithreadedLengthPartitioned  | 2.070 m |    NA | 2.070 m | 2.070 m | 2.070 m |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  Min    : Minimum
+  Max    : Maximum
+  Median : Value separating the higher half of all measurements (50th percentile)
+  1 m    : 1 Minute (60 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:12:04 (724.45 sec), executed benchmarks: 3
+
+Global total time: 00:12:12 (732.43 sec), executed benchmarks: 3
+// * Artifacts cleanup *
+Artifacts cleanup is finished
