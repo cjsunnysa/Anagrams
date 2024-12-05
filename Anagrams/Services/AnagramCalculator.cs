@@ -145,15 +145,19 @@ internal abstract class AnagramCalculator
 
     protected ImmutableArray<AnagramGroup> CreateAnagramGroupsForSection(IAnagramCompareAlgorithm anagramAlgorithm, IList<string> words)
     {
-        HashSet<int> foundIndexes = new HashSet<int>(words.Count/3);
+        int foundIndexSize = Convert.ToInt32(words.Count * 0.1);
 
-        HashSet<AnagramGroup> results = new HashSet<AnagramGroup>(300);
+        HashSet<int> foundIndexes = new HashSet<int>(foundIndexSize);
+
+        var results = new LinkedList<AnagramGroup>();
 
         for (int i = 0; i < words.Count; i++)
         {
             var candidateWord = words[i];
 
-            var anagrams = new HashSet<string>(10) { candidateWord };
+            var anagrams = new LinkedList<string>();
+            
+            anagrams.AddLast(candidateWord);
 
             for (int j = i + 1; j < words.Count; j++)
             {
@@ -167,7 +171,7 @@ internal abstract class AnagramCalculator
                 if (anagramAlgorithm.IsAnagram(candidateWord, compareWord))
                 {
                     foundIndexes.Add(j);
-                    anagrams.Add(compareWord);
+                    anagrams.AddLast(compareWord);
                 }
             }
 
@@ -175,7 +179,7 @@ internal abstract class AnagramCalculator
             {
                 var points = WordScorer.CalculatePoints(candidateWord);
 
-                results.Add(new AnagramGroup(anagrams, points));
+                results.AddLast(new AnagramGroup(anagrams, points));
             }
         }
 
