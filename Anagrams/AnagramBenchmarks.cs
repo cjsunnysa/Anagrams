@@ -6,12 +6,19 @@ using System.Collections.Immutable;
 namespace Anagrams;
 
 [SimpleJob(RunStrategy.ColdStart, iterationCount: 1)]
-[MinColumn, MaxColumn, MeanColumn, MedianColumn]
+[MemoryDiagnoser]
 public class AnagramBenchmarks
 {
-    //private readonly int[] _wordLengths = [ 2, 3, 4, 5, 6, 7 ];
-
     private ImmutableArray<string> _words;
+    private ImmutableArray<string> _filteredWords;
+
+    [ParamsSource(nameof(Data))]
+    public int[] WordsLength { get; set; } = [];
+
+    public object[] Data()
+    {
+        return [new int[] { 2, 3, 4, 5 }];
+    }
 
     [GlobalSetup]
     public async Task Setup()
@@ -25,8 +32,12 @@ public class AnagramBenchmarks
         var httpService = new HttpService(httpClient);
 
         _words = await httpService.FetchWords();
+    }
 
-        //_words = words.Where(x => _wordLengths.Contains(x.Length)).ToImmutableArray();
+    [IterationSetup]
+    public void IterationSetup()
+    {
+        _filteredWords = _words.Where(x => WordsLength.Contains(x.Length)).ToImmutableArray();
     }
 
     [Benchmark]

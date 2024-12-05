@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>Anagrams.AnagramBenchmarks-20241204-160520</title>
+<title>Anagrams.AnagramBenchmarks-20241205-102553</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -13,21 +13,22 @@
 </head>
 <body>
 <pre><code>
-BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4460/23H2/2023Update/SunValley3)
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.26100.2314)
 Intel Core i7-10750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
 .NET SDK 9.0.100-rc.2.24474.11
   [Host]     : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
-  Job-YMOMVH : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+  Job-YTOVAA : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
 </code></pre>
-<pre><code>IterationCount=1  RunStrategy=ColdStart  
+<pre><code>InvocationCount=1  IterationCount=1  RunStrategy=ColdStart  
+UnrollFactor=1  
 </code></pre>
 
 <table>
-<thead><tr><th>Method                                       </th><th>Mean</th><th>Error</th><th>Min</th><th>Max</th><th>Median</th>
+<thead><tr><th>Method                                       </th><th>WordsLength</th><th>Mean</th><th>Error</th><th>Gen0   </th><th>Gen1</th><th>Gen2</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>LetterCountAlgorithmUnpartitioned</td><td>5.288 m</td><td>NA</td><td>5.288 m</td><td>5.288 m</td><td>5.288 m</td>
-</tr><tr><td>LetterCountAlgorithmSingleThreadedLengthPartitioned</td><td>4.661 m</td><td>NA</td><td>4.661 m</td><td>4.661 m</td><td>4.661 m</td>
-</tr><tr><td>LetterCountAlgorithmMultithreadedLengthPartitioned</td><td>2.070 m</td><td>NA</td><td>2.070 m</td><td>2.070 m</td><td>2.070 m</td>
+</thead><tbody><tr><td>LetterCountAlgorithmUnpartitioned</td><td>Int32[4]</td><td>5.128 m</td><td>NA</td><td>81679000.0000</td><td>34000.0000</td><td>3000.0000</td><td>477.18 GB</td>
+</tr><tr><td>LetterCountAlgorithmSingleThreadedLengthPartitioned</td><td>Int32[4]</td><td>5.029 m</td><td>NA</td><td>81678000.0000</td><td>30000.0000</td><td>2000.0000</td><td>477.18 GB</td>
+</tr><tr><td>LetterCountAlgorithmMultithreadedLengthPartitioned</td><td>Int32[4]</td><td>1.935 m</td><td>NA</td><td>82600000.0000</td><td>12000.0000</td><td>1000.0000</td><td>477.18 GB</td>
 </tr></tbody></table>
 </body>
 </html>

@@ -1,0 +1,622 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 12 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33
+// command took 1.42 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\obj\Release\net8.0/" /p:OutDir="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0/" /p:OutputPath="C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0/" --output "C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0/" in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33
+// command took 5.89 sec and exited with 0
+// ***** Done, took 00:00:07 (7.41 sec)   *****
+// Found 12 benchmarks:
+//   AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+//   AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+//   AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+//   AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+//   AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+//   AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+//   AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+//   AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+//   AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+//   AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+//   AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+//   AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1716 1700 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmUnpartitioned(WordsLength: 2)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 0 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-NZONUR(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_0.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 181
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 5936 has exited with code -1.
+
+// ** Remained 11 (91.7%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1468 1404 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned(WordsLength: 2)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 1 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-TDSQMT(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_1.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 346
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 4912 has exited with code -1.
+
+// ** Remained 10 (83.3%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1652 1760 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned(WordsLength: 2)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 2 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-OTFHRV(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_2.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 511
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 24012 has exited with code -1.
+
+// ** Remained 9 (75.0%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1632 1792 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmUnpartitioned(WordsLength: 3)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 3 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-NZSMWD(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_3.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 676
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 21624 has exited with code -1.
+
+// ** Remained 8 (66.7%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1640 1836 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned(WordsLength: 3)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 4 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-FTEFAZ(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_4.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 841
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 23656 has exited with code -1.
+
+// ** Remained 7 (58.3%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1844 1760 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned(WordsLength: 3)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 5 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-ICISLN(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_5.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 1006
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 24276 has exited with code -1.
+
+// ** Remained 6 (50.0%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1828 1716 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmUnpartitioned(WordsLength: 4)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 6 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-WCMWDK(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_6.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 1171
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 9908 has exited with code -1.
+
+// ** Remained 5 (41.7%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1868 1860 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned(WordsLength: 4)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 7 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-WMTDFQ(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_7.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 1336
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 10704 has exited with code -1.
+
+// ** Remained 4 (33.3%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1904 1892 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned(WordsLength: 4)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 8 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-IEFZRX(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_8.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 1501
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 23772 has exited with code -1.
+
+// ** Remained 3 (25.0%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1936 1932 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmUnpartitioned(WordsLength: 5)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 9 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-QNSCZI(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_9.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 1666
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 18440 has exited with code -1.
+
+// ** Remained 2 (16.7%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1640 304 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned(WordsLength: 5)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 10 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-QTSZJB(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_10.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 1831
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 12704 has exited with code -1.
+
+// ** Remained 1 (8.3%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bd6066ac-96d2-4791-9ab4-803067ebfa33.dll --anonymousPipes 1836 1468 --benchmarkName "Anagrams.AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned(WordsLength: 5)" --job "InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 11 in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-EPWGYR(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Linq.ImmutableArrayExtensions.Where[T](ImmutableArray`1 immutableArray, Func`2 predicate)
+   at Anagrams.AnagramBenchmarks.IterationSetup() in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\AnagramBenchmarks.cs:line 35
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunSpecific(Int64 invokeCount, IterationMode iterationMode, Int32 iterationCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineActualStage.Run(Int64 invokeCount, IterationMode iterationMode, Boolean runAuto, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.EngineActualStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, Boolean forceSpecific)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_11.Run(IHost host, String benchmarkName) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 1996
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\XPS 9500\source\repos\Anagrams\Anagrams\bin\Release\net8.0\bd6066ac-96d2-4791-9ab4-803067ebfa33\bd6066ac-96d2-4791-9ab4-803067ebfa33.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 24180 has exited with code -1.
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2024-12-05 10:23 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\Anagrams.AnagramBenchmarks-report.html
+
+// * Detailed results *
+AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+Runtime = .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+// * Summary *
+
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.26100.2314)
+Intel Core i7-10750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 9.0.100-rc.2.24474.11
+  [Host]     : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+  Job-QCRBFP : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX2
+
+InvocationCount=1  IterationCount=1  RunStrategy=ColdStart  
+UnrollFactor=1  
+
+| Method                                              | WordsLength | Mean | Error |
+|---------------------------------------------------- |------------ |-----:|------:|
+| LetterCountAlgorithmUnpartitioned                   | 2           |   NA |    NA |
+| LetterCountAlgorithmSingleThreadedLengthPartitioned | 2           |   NA |    NA |
+| LetterCountAlgorithmMultithreadedLengthPartitioned  | 2           |   NA |    NA |
+| LetterCountAlgorithmUnpartitioned                   | 3           |   NA |    NA |
+| LetterCountAlgorithmSingleThreadedLengthPartitioned | 3           |   NA |    NA |
+| LetterCountAlgorithmMultithreadedLengthPartitioned  | 3           |   NA |    NA |
+| LetterCountAlgorithmUnpartitioned                   | 4           |   NA |    NA |
+| LetterCountAlgorithmSingleThreadedLengthPartitioned | 4           |   NA |    NA |
+| LetterCountAlgorithmMultithreadedLengthPartitioned  | 4           |   NA |    NA |
+| LetterCountAlgorithmUnpartitioned                   | 5           |   NA |    NA |
+| LetterCountAlgorithmSingleThreadedLengthPartitioned | 5           |   NA |    NA |
+| LetterCountAlgorithmMultithreadedLengthPartitioned  | 5           |   NA |    NA |
+
+Benchmarks with issues:
+  AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+  AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+  AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=2]
+  AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+  AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+  AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=3]
+  AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+  AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+  AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=4]
+  AnagramBenchmarks.LetterCountAlgorithmUnpartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+  AnagramBenchmarks.LetterCountAlgorithmSingleThreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+  AnagramBenchmarks.LetterCountAlgorithmMultithreadedLengthPartitioned: Job-QCRBFP(InvocationCount=1, IterationCount=1, RunStrategy=ColdStart, UnrollFactor=1) [WordsLength=5]
+
+// * Warnings *
+Environment
+  Summary -> Detected error exit code from one of the benchmarks. It might be caused by following antivirus software:
+        - Windows Defender (windowsdefender://)
+Use InProcessEmitToolchain or InProcessNoEmitToolchain to avoid new process creation.
+
+
+// * Legends *
+  WordsLength : Value of the 'WordsLength' parameter
+  Mean        : Arithmetic mean of all measurements
+  Error       : Half of 99.9% confidence interval
+  1 ns        : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:12 (12.44 sec), executed benchmarks: 12
+
+Global total time: 00:00:20 (20.2 sec), executed benchmarks: 12
+// * Artifacts cleanup *
+Artifacts cleanup is finished
